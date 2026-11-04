@@ -2,6 +2,7 @@
 
 **Name:** Aidynuly Makhambet
 **Group:** IT-2504
+**GutHub Pages:** https://aidynulymakhambet.github.io/Assignment-6.-jQuery-Selectors-Effects-Animations-/
 
 ## Part 1: Getting Started with jQuery (Setup, Selectors & CSS)
 ![Part 1](screenshots/part1.png)
