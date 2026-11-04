@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #6 - jQuery Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- part 1: -->
+        <section id="part1" class="card">
+            <h1>Welcome to My Portfolio</h1>
+            <h2 id="student-name">Name: Makhambet | Group: IT-2504</h2>
+            <h3 id="personal-headline">Front-End Web Developer &amp; Student</h3>
+            <p class="intro-text">Hello! I am a student exploring modern web technologies, interactive user interfaces, and jQuery manipulation.</p>
+            <div class="btn-group">
+                <button id="update-text-btn">Update Headline (.text)</button>
+                <button id="update-html-btn">Update Intro (.html)</button>
+                <button id="style-btn">Highlight Title (.css)</button>
+                <button id="light-theme-btn">Light Theme</button>
+                <button id="dark-theme-btn">Dark Theme</button>
+            </div>
+        </section>
+
+        <!-- part 2: -->
+        <section id="part2" class="card">
+            <h2>About Me</h2>
+            <p class="bio-text">I am passionate about building clean, responsive websites and learning JavaScript libraries.</p>
+            <div id="about-details">
+                <p id="status-message"><strong>Status:</strong> Currently learning jQuery!</p>
+                <ul class="fun-facts">
+                    <li>I enjoy solving algorithmic problems and building web apps.</li>
+                    <li>My goal is to become a full-stack software engineer.</li>
+                    <li>I like reading tech blogs and exploring UI design.</li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button id="hide-btn">Hide</button>
+                <button id="show-btn">Show</button>
+                <button id="toggle-btn">Toggle</button>
+            </div>
+
+            <h3>Photo Gallery</h3>
+            <div id="gallery" class="gallery">
+                <img src="images/profile.svg" alt="Profile Picture" class="gallery-img">
+                <img src="images/hobby.svg" alt="Favorite Hobby" class="gallery-img">
+                <img src="images/project.svg" alt="Personal Project" class="gallery-img">
+            </div>
+            <div class="btn-group">
+                <button id="fade-in-btn">Fade In</button>
+                <button id="fade-out-btn">Fade Out</button>
+                <button id="fade-toggle-btn">Fade Toggle</button>
+            </div>
+
+            <h3>My Favorites (Click to Expand)</h3>
+            <div class="btn-group">
+                <button id="slide-down-all-btn">Slide Down All</button>
+                <button id="slide-up-all-btn">Slide Up All</button>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h4 class="slide-heading">My Favorite Music</h4>
+                    <div class="slide-panel">
+                        <p>I enjoy listening to lo-fi beats, instrumental electronic music, and indie rock while coding.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="slide-heading">My Favorite Movie</h4>
+                    <div class="slide-panel">
+                        <p>My favorite movies are Interstellar and The Social Network because of their inspiring stories.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="slide-heading">My Favorite Subject</h4>
+                    <div class="slide-panel">
+                        <p>Web Technologies and Front-End Development is my favorite subject this semester.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- part 3: -->
+        <section id="part3" class="card">
+            <h2>Technical Skills &amp; DOM Manipulation</h2>
+            <ul id="skills-list">
+                <li>HTML5 &amp; CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>jQuery</li>
+                <li>Git &amp; GitHub</li>
+            </ul>
+            <div class="input-group">
+                <input type="text" id="skill-input" placeholder="Enter a new skill...">
+                <button id="add-skill-btn">Add Skill</button>
+                <button id="prepend-skill-btn">Prepend Skill</button>
+                <button id="remove-skill-btn">Remove Skill</button>
+            </div>
+            <p id="skill-error" class="error-msg"></p>
+
+            <h3>Social Media Link</h3>
+            <p>
+                Current Profile Link:
+                <a id="social-link" href="https://github.com" target="_blank">Visit My GitHub (https://github.com)</a>
+            </p>
+            <div class="btn-group">
+                <button id="change-link-btn">Switch Link Destination (.attr)</button>
+            </div>
+
+            <h3>Live Contact Form</h3>
+            <form id="contact-form" onsubmit="return false;">
+                <div class="form-row">
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" placeholder="Enter your name here">
+                </div>
+                <div class="form-row">
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" placeholder="some_mail@example.com">
+                </div>
+            </form>
+            <div class="live-preview">
+                <p><strong>Live Name:</strong> <span id="live-name">Not entered yet</span></p>
+                <p><strong>Live Email:</strong> <span id="live-email">Not entered yet</span></p>
+            </div>
+        </section>
+
+        <!-- part 4: -->
+        <section id="part4" class="card">
+            <h2>Skill Level Animations</h2>
+            <div class="btn-group">
+                <button id="animate-skills-btn">Animate My Skills</button>
+            </div>
+            <div class="skill-bars">
+                <div class="skill-bar-item">
+                    <div class="skill-label"><span>HTML5 &amp; CSS3</span><span>90%</span></div>
+                    <div class="bar-track"><div id="bar-html" class="bar-fill" data-width="90%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-label"><span>JavaScript</span><span>80%</span></div>
+                    <div class="bar-track"><div id="bar-js" class="bar-fill" data-width="80%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-label"><span>jQuery</span><span>85%</span></div>
+                    <div class="bar-track"><div id="bar-jquery" class="bar-fill" data-width="85%"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-label"><span>Git &amp; GitHub</span><span>75%</span></div>
+                    <div class="bar-track"><div id="bar-git" class="bar-fill" data-width="75%"></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
